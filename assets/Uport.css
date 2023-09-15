@@ -11,7 +11,7 @@ body {
 
 .code-card .card-header {
     border-radius: 8px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out !important;
   }
   
   .code-card:hover,
@@ -22,7 +22,6 @@ body {
 
 body{
     width: 100%;
-    max-width: 1400px;
     display: block;
     margin: auto;
     min-height: 100vh;
@@ -30,24 +29,24 @@ body{
     font-family: sans-serif;
 }
 
-.navbar{
-    width: 100%;
-    position: fixed;
+
+nav {
+    position:sticky;
+    justify-content: absolute;
+    margin-top: 5%;
+  }
+
+  .navbar {
+    width: 20px;
+    position: top;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: absolute;
     z-index: 9;
     background: #1a1a1a;
-}
-
-.link-group{
-    list-style: none;
-    display: flex;
-}
-
-.link a{
+  }
+  
+  .link a{
     color: #fff;
     opacity: 0.5;
     text-decoration: none;
@@ -58,10 +57,26 @@ body{
     transition: .5s;
     font-size: 20px;
 }
+  
+  /* The user's cursor is positioned over the element */
+  .link:hover {
+    background-color: #d9d9d9;
+    color: #fff;
+  }
+  
+  /* The user is actively pressing down on the element */
+  .any-link:active {
+    font-size: 50%;
+    position: top right;
+  }
+  
+  /* The element is currently in focus, either by tabbing to or clicking on it */
+  .link:focus {
+    outline: none;
+    border-color: #8ac4ff;
+  }
 
-.link a:hover, .link.active a{
-    opacity: 1;
-}
+
 
 
 .home-section{
@@ -95,16 +110,16 @@ body{
 
 .home-section.active,
 .AboutMe-btn.live,
-.contact-section.active{
+.Contact-Me.active
+{
     position: relative;
     opacity: 1;
-    z-index: 8;
+    z-index: 10;
 }
 
 
 /* AboutMe-section */
 .AboutMe-section{
-    top:active;
 width: 100%;
     min-height: 100vh;
     padding: 150px 100px 100px;
@@ -112,9 +127,11 @@ width: 100%;
     top: 0;
     transition: 1s;
     opacity: 0;
+    display:inline-block;
 }
 
 .AboutMe-heading{
+    display:inherit;
     font-size: 100px;
     background: #252525;
     text-transform: capitalize;
@@ -127,7 +144,8 @@ width: 100%;
 }
 
 .AboutMe-container{
-    display: grid;
+
+    display:inherit;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 100px;
 }
@@ -148,6 +166,7 @@ width: 100%;
 }
 
 .project-content{
+    display: grid;
     position: relative;
     padding: 40px;
     color: #fff;
