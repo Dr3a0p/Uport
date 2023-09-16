@@ -98,14 +98,15 @@ nav {
     font-weight: 300;
 }
 
-.home-img{
+.home-image{
     position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50%;
+    background-image:image(file:///Users/dre/Desktop/pictures/drea.jpg);
+    top: 25px;
+    right: 25px;
+    height: 100px;
+    width: 50px;
     object-fit: cover;
-    opacity: 0.2;
+    opacity: 0.2px;
 }
 
 .home-section.active,
