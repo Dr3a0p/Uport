@@ -98,16 +98,14 @@ nav {
     font-weight: 300;
 }
 
-.home-image{
-    position: absolute;
-    background-image:image(file:///Users/dre/Desktop/pictures/drea.jpg);
-    top: 25px;
-    right: 25px;
-    height: 100px;
-    width: 50px;
-    object-fit: cover;
-    opacity: 0.2px;
+.AboutMe-heading{
+    left: 50%;
+    margin-left: -500px;
+    background:url(images/logo.png) no-repeat;
+    width:1000px;
+    height:200px;
 }
+
 
 .home-section.active,
 .AboutMe-btn.live,
@@ -129,6 +127,11 @@ width: 100%;
     transition: 1s;
     opacity: 0;
     display:inline-block;
+}
+
+.AboutMe-heading{
+    position: relative;
+    background-image:url(images/header.png);
 }
 
 .AboutMe-heading{
