@@ -9,16 +9,6 @@ body {
   color: #2d2f3b;
 }
 
-.code-card .card-header {
-    border-radius: 8px;
-    transition: all 0.5s ease-in-out !important;
-  }
-  
-  .code-card:hover,
-  .code-card:hover .card-header {
-    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
-  }
-
 
 body{
     width: 100%;
@@ -37,7 +27,7 @@ body{
 #main-box
  {
  	  background: url(./img/hellolap.jpg) center center fixed; 
-      background-size:contain;
+      background-size:auto;
     font-family:monospace;
 }
 

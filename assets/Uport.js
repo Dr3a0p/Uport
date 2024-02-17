@@ -1,5 +1,5 @@
 const links = document.querySelectorAll('.link');
-const sections = document.querySelectorAll('home, AboutMe, ContactMe');
+const sections = document.querySelectorAll('home, About Me, Projects, Contact Me');
 
 let activeLink = 0;
 
