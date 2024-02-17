@@ -30,193 +30,65 @@ body{
 }
 
 
-nav {
-    position:sticky;
-    justify-content: absolute;
-    margin-top: 5%;
-  }
-
-  .navbar {
-    width: 20px;
-    position: top;
-    top: 0;
-    left: 0;
-    align-items: absolute;
-    z-index: 9;
-    background: #1a1a1a;
-  }
-  
-  .link a{
-    color: #fff;
-    opacity: 0.5;
-    text-decoration: none;
-    text-transform: capitalize;
-    padding: 10px 30px;
-    margin: 0 20px;
-    line-height: 80px;
-    transition: .5s;
-    font-size: 20px;
+*{
+	margin: 0;
+	padding: 0;
 }
-  
-  /* The user's cursor is positioned over the element */
-  .link:hover {
-    background-color: #d9d9d9;
-    color: #fff;
-  }
-  
-  /* The user is actively pressing down on the element */
-  .any-link:active {
-    font-size: 50%;
-    position: top right;
-  }
-  
-  /* The element is currently in focus, either by tabbing to or clicking on it */
-  .link:focus {
-    outline: none;
-    border-color: #8ac4ff;
-  }
-
-
-
-
-.home-section{
-    width: 100%;
-    height: 100vh;
-    padding: 0 150px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: active;
-    opacity: 1;
-    transition: 1s;
-}
-
-.hero-heading{
-    color: #fff;
-    font-size: 120px;
-    text-transform: capitalize;
-    font-weight: 300;
-}
-
-.AboutMe-heading{
-    left: 50%;
-    margin-left: -500px;
-    background:url(images/logo.png) no-repeat;
-    width:1000px;
-    height:200px;
+#main-box
+ {
+ 	  background: url(./img/hellolap.jpg) center center fixed; 
+      background-size:contain;
+    font-family:monospace;
 }
 
 
-.home-section.active,
-.AboutMe-btn.live,
-.Contact-Me.active
+.bar
 {
-    position: relative;
-    opacity: 1;
-    z-index: 10;
+    width: 1100px;
+	height: 40px;
+	color: white;
+    margin: 30px auto;
+    
 }
 
-
-/* AboutMe-section */
-.AboutMe-section{
-width: 100%;
-    min-height: 100vh;
-    padding: 150px 100px 100px;
-    position: fixed;
-    top: 0;
-    transition: 1s;
-    opacity: 0;
-    display:inline-block;
+.bar ul 
+{
+	float: left;
+	list-style: none;
+    display: block;
+    
 }
-
-.AboutMe-heading{
-    position: relative;
-    background-image:url(images/header.png);
-}
-
-.AboutMe-heading{
-    display:inherit;
-    font-size: 100px;
-    background: #252525;
-    text-transform: capitalize;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #1a1a1a;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 8px transparent;
-}
-
-.AboutMe-container{
-
-    display:inherit;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
-}
-
-.AboutMe-card{
-    height: 400px;
-    position: relative;
-}
-
-.AboutMe-img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    transition: .5s;
-}
-
-.project-content{
-    display: grid;
-    position: relative;
-    padding: 40px;
-    color: #fff;
-    transition: .5s;
-    opacity: 0;
-}
-
-.AboutMe-title{
-    font-size: 50px;
-    text-transform: capitalize;
-    text-align: center;
-    font-weight: 300;
-}
-
-.AboutMe-info{
-    margin: 40px;
+.bar ul li 
+{
+	float: left;
+	list-style: none;
+	display: block;
+    width: 210px;
+    background-color: rgba(148, 148, 148,0.3);
     font-size: 20px;
-    line-height: 30px;
     text-align: center;
-}
-
-.AboutMe-btn-grp{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-.AboutMe-btn{
+    text-decoration: none;
     height: 40px;
-    text-transform: capitalize;
-    font-size: 18px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
+    line-height: 40px;
+    margin-right: 4px;
 }
-
-.AboutMe-btn.live{
-    background: none;
-    border: 2px solid #fff;
+ul li a {
+    display: block;
+    cursor:context-menu;
 }
-
-.AboutMe-card:hover .AboutMe-img{
-    filter: blur(20px);
+ul li a:hover
+{
+    display: block;
+    background-color: floralwhite;
+    color: steelblue;
 }
-
-.AboutMe-card:hover .AboutMe-content{
-    opacity: 1;
+.bar ul li ul li
+{
+    margin-bottom: 0;
+    display: none;
+}
+.bar ul li:hover ul li 
+{
+    display: block;
+    
 }
