@@ -1,19 +1,53 @@
-const links = document.querySelectorAll('.link');
-const sections = document.querySelectorAll('home, About Me, Projects, Contact Me');
+const bar = document.querySelector("bar");
+const supportPageOffset = window.pageXOffset !== undefined;
+const isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-let activeLink = 0;
+let previousScrollPosition = 0;
 
-links.forEach((link, i) => {
-    link.addEventListener('click', () => {
-        if(activeLink != i){
-            links[activeLink].classList.remove('active');
-            link.classList.add('active');
-            sections[activeLink].classList.remove('active');
+const isScrollingDown = () => {
+  let scrolledPosition = supportPageOffset
+    ? window.pageYOffset
+    : isCSS1Compat
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
+  let isScrollDown;
 
-            setTimeout(() => {
-                activeLink = i;
-                sections[i].classList.add('active');
-            }, 1000);
-        }
-    })
-})
+  if (scrolledPosition > previousScrollPosition) {
+    isScrollDown = true;
+  } else {
+    isScrollDown = false;
+  }
+  previousScrollPosition = scrolledPosition;
+  return isScrollDown;
+};
+
+const handleNavScroll = () => {
+  if (isScrollingDown() && !bar.contains(document.activeElement)) {
+    bar.classList.add("scroll-down");
+    bar.classList.remove("scroll-up");
+  } else {
+    bar.classList.add("scroll-up");
+    bar.classList.remove("scroll-down");
+  }
+};
+
+var throttleTimer;
+
+const throttle = (callback, time) => {
+  if (throttleTimer) return;
+
+  throttleTimer = true;
+  setTimeout(() => {
+    callback();
+    throttleTimer = false;
+  }, time);
+};
+
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+window.addEventListener("scroll", () => {
+  if (mediaQuery && !mediaQuery.matches) {
+    throttle(handleNavScroll, 250);
+  }
+});
+
