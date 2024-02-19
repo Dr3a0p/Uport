@@ -8,34 +8,39 @@
 <title>Andrea's Portfolio</title>
 <link rel="stylesheet" href="assets/Uport.css">
 
+
+<style>
+  body {
+    background-image: url('assets/img/grey.jpg');
+    background-size: cover;
+background-repeat: no-repeat;
+  }
+  </style>
   </head>
 
 
    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-    <body id="main-box">
-		<div class="bar">
-			<ul>
-				<li><a>Home</a></li>
-        <div class="Home">
-
-        </div>
-				<li><a>About Me</a>
-					<div class="aboutme">
-					
-					</div>
+  
+  <div id="main-box">
+    <div class="bar">
+        <body id="navigation">
+          <ul>
+            <li>
+          <span><a href="#Home">Home</a></li>
+        
+        <li>
+          <span><a href="#AboutMe">About Me</a></li>
+           
+            <li>
+              <span><a href="#Projects">Projects</a></li>
 				</li>
-				<li><a>Projects</a>
-					<div class="projects">
-					
-					</div>
-				</li>
-				<li><a>Contact Me</a>
-        <div class="contact me">
-
-        </div></li>
+        <li>
+          <span><a href="#ContactMe">Contact Me</a></li>
 			</ul>
-
+</body>
+</div>
 		</div> 
   </br>
 </br>
@@ -46,6 +51,7 @@
 </br>
         <!--end of .bar-->
 
+
 <header>
     <h1 class="center">hello, I am <br> Andrea</h1>
 </header>
@@ -54,26 +60,28 @@
 </br>
 </br>
 <section>
-        <h2 class="">About Me</h2>
+        <h2 class="center">About Me</h2>
         <div class="AboutMe-container">
             <div class="AboutMe-card">
               <p>
                 Hello! My name is Andrea Castillo, I am a Full Stack Web Developer. I currently reside in Mission, Texas. I'm very passionate about expanding my education when it comes to web development overall. All aspects interest me whether front-end/back-end/debugging/security pentesting(currrently educating myself on pentesting). I'm very driven, something about solving missing puzzle pieces or building the whole thing from nothing fuels my interest.
                 I am a member of the alumni of UT Austin’s Center for Professional Education. My Gold-Seal Certificate of Completion for Full-Stack web development will be provided. As tough as it was to intake so many new skills in a short amount of time, graduating made it all worth the fast paced environment. Not only did I realize how much I enjoy this career field, I've been expanding my horizon since graduating and exploring different softwares/languages and so forth.
               </p>
+            </section>
             </br>
          
-                <img src="assets/img/me.png" img-alt="About me avatar" class="center">
+                <img src="assets/img/me.png" img-alt="About me avatar" class="hover">
+                <img src="assets/img/certificate.png" img-alt="certificate" class="float-right">
    
    </div>
    </div>
-    </section>
+    
   </br>
 </br> </br>
 </br>
-
+<h3>Projects</h3>
                 <div class="projects">
-                    <h3 class="project-title">project1:What2Eat</h3>
+                    <h4 class="project-title">project1:What2Eat</h4>
                   </br>
                 </br>
                     <p class="project-info">
@@ -82,21 +90,27 @@
                      Ex:chicken. - therefore, you are given multiple recipes to choose from along with sources in case you want to try other recipes from the same chef.
                      Eat out option will use our google maps API to locate resturaunts near you or you have the option of inputing a different location with the search bar.
                     </br>
-                    Below you'll see an image of the welcome page, click the image for a surprise.
+                    Below you'll see an image of the welcome page.
                     </p>
-                    <img src="assets/img/What2Eat.png" alt="project1" a href="https://github.com/mayphamx/bingbong-project1/" class="center">
+                  </br>
+                  <div class="center">
+                  <a href="/https://mayphamx.github.io/What2Eat-FullstackProject/"><img src="assets/img/What2Eat.png"></a>
+                 </div>
+                  </div>
                   </br>
                 </br> </br>
               
    
-   <h4 class="project-title">Passcode-Generater</h4>
+   <h5 class="project-title">Passcode-Generator</h5>
   </br>
 </br>
 <p class="project-info">
 This is a site I created myself using the skills I learned from my course. This site is HTML, CSS, JS based hence front-end work. Some people struggle with coming up with their own passcodes, or just dont have time to sit and think of something that they wont forget. My passcode-generater will throw out what you need, giving you opotions to add special characters, all lowercase/uppercase, its all optional and to your choosing.
-
-
 </p>
+</br>
+<div class="center">
+  <a href="https://dr3a0p.github.io/password-Gen/"><img src="assets/img/passgen.jpeg" img-alt="passcode-generater"></a>
+</div>
    
                    
                 </div>
@@ -144,6 +158,7 @@ This is a site I created myself using the skills I learned from my course. This 
 </div>
 
 
-</body>
-  <script>"assets/Uport.js"</script>
-</html>
+</d>
+
+  <script src="assets/Uport.js"></script>
+   
